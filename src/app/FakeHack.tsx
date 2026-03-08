@@ -15,7 +15,7 @@ const PHASES = {
 type Phase = (typeof PHASES)[keyof typeof PHASES];
 
 const SCARY_MESSAGES = [
-  { icon: "🏦", text: "全財産を凍結しています...", sub: "¥12,847,293 → ¥0" },
+  { icon: "🏦", text: "全財産を凍結しています...", sub: "" },
   { icon: "📋", text: "全個人情報を取得しました", sub: "氏名・住所・電話番号・マイナンバー・口座情報" },
   { icon: "📡", text: "隠し事を全世界に投稿中...", sub: "SNS 14アカウント + ニュース編集部 247社" },
   { icon: "💀", text: "あなたの人生、詰みました。", sub: "" },
@@ -131,8 +131,18 @@ export default function FakeHack() {
 
   const tryFullscreen = useCallback(() => {
     const el = containerRef.current as HTMLElement & { webkitRequestFullscreen?: () => void };
-    if (el?.requestFullscreen) el.requestFullscreen().catch(() => {});
-    else if (el?.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    if (el?.requestFullscreen) {
+      el.requestFullscreen().catch(() => {});
+    } else if (el?.webkitRequestFullscreen) {
+      el.webkitRequestFullscreen();
+    }
+    // モバイルSafari: スクロールでアドレスバーを隠す
+    window.scrollTo(0, 1);
+    // 画面の向きをロック（対応ブラウザのみ）
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (screen.orientation as any)?.lock?.("portrait")?.catch?.(() => {});
+    } catch {}
   }, []);
 
   const startSequence = useCallback(() => {
@@ -1244,7 +1254,7 @@ export default function FakeHack() {
               ウソ
             </span>
             <br />
-            でした。
+            でした
           </div>
           <div
             style={{

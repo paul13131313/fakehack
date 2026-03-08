@@ -4,11 +4,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "FAKE HACK",
   description: "セキュリティ啓発プロジェクト",
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "mobile-web-app-capable": "yes",
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
   viewportFit: "cover",
 };
 
