@@ -457,9 +457,9 @@ export default function FakeHack() {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Noto+Sans+JP:wght@400;700&display=swap');
         *{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
-        @keyframes flicker{0%,100%{opacity:1}50%{opacity:.8}52%{opacity:.12}54%{opacity:.9}56%{opacity:.25}58%{opacity:1}}
+        @keyframes flicker{0%,100%{opacity:1}50%{opacity:.85}52%{opacity:.5}54%{opacity:.95}56%{opacity:.6}58%{opacity:1}}
         @keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-2px,1px)}20%{transform:translate(2px,-1px)}30%{transform:translate(-1px,2px)}40%{transform:translate(1px,-2px)}50%{transform:translate(-2px,-1px)}60%{transform:translate(2px,1px)}70%{transform:translate(-1px,-2px)}80%{transform:translate(1px,2px)}90%{transform:translate(-2px,1px)}}
         @keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
@@ -505,7 +505,7 @@ export default function FakeHack() {
             </div>
             <h1
               style={{
-                fontFamily: "'Dela Gothic One',sans-serif",
+                fontFamily: "'Noto Sans JP',sans-serif", fontWeight: 700,
                 fontSize: 28,
                 color: "#fff",
                 margin: 0,
@@ -995,12 +995,13 @@ export default function FakeHack() {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Dela Gothic One',sans-serif",
+                    fontFamily: "'Noto Sans JP',sans-serif",
+                    fontWeight: 700,
                     fontSize: 22,
-                    color: "#ff0000",
+                    color: "#ff2222",
                     lineHeight: 1.6,
                     marginBottom: 14,
-                    animation: "rgbSplit 0.3s infinite",
+                    animation: "rgbSplit 0.5s infinite",
                   }}
                 >
                   オール初期化
@@ -1137,11 +1138,11 @@ export default function FakeHack() {
                 key={i}
                 style={{
                   background:
-                    i === msgIndex - 1 ? "rgba(255,0,0,.12)" : "rgba(255,0,0,.04)",
-                  border: `1px solid ${i === msgIndex - 1 ? "rgba(255,0,0,.6)" : "rgba(255,0,0,.12)"}`,
+                    i === msgIndex - 1 ? "rgba(255,0,0,.15)" : "rgba(255,0,0,.06)",
+                  border: `1px solid ${i === msgIndex - 1 ? "rgba(255,0,0,.7)" : "rgba(255,0,0,.18)"}`,
                   borderRadius: 14,
-                  padding: "16px 18px",
-                  marginBottom: 12,
+                  padding: "18px 20px",
+                  marginBottom: 14,
                   animation: i === msgIndex - 1 ? "fadeSlideUp 0.4s ease-out" : "none",
                 }}
               >
@@ -1150,10 +1151,11 @@ export default function FakeHack() {
                   <div>
                     <div
                       style={{
-                        fontFamily: "'Dela Gothic One',sans-serif",
-                        fontSize: 15,
-                        color: "#ff0000",
-                        animation: i === msgIndex - 1 ? "flicker 0.3s infinite" : "none",
+                        fontFamily: "'Noto Sans JP',sans-serif",
+                        fontWeight: 700,
+                        fontSize: 16,
+                        color: "#ff3333",
+                        animation: i === msgIndex - 1 ? "flicker 1s infinite" : "none",
                       }}
                     >
                       {msg.text}
@@ -1162,9 +1164,9 @@ export default function FakeHack() {
                       <div
                         style={{
                           fontFamily: "'Share Tech Mono',monospace",
-                          fontSize: 11,
-                          color: "#ff6666",
-                          marginTop: 5,
+                          fontSize: 12,
+                          color: "#ff8888",
+                          marginTop: 6,
                         }}
                       >
                         {msg.sub}
@@ -1191,7 +1193,7 @@ export default function FakeHack() {
               <div style={{ fontSize: 120, animation: "skullPulse 0.5s ease-out" }}>💀</div>
               <div
                 style={{
-                  fontFamily: "'Dela Gothic One',sans-serif",
+                  fontFamily: "'Noto Sans JP',sans-serif", fontWeight: 700,
                   fontSize: 32,
                   color: "#ff0000",
                   marginTop: 20,
@@ -1222,7 +1224,7 @@ export default function FakeHack() {
           <div style={{ fontSize: 90, marginBottom: 28 }}>🎬</div>
           <div
             style={{
-              fontFamily: "'Dela Gothic One',sans-serif",
+              fontFamily: "'Noto Sans JP',sans-serif", fontWeight: 700,
               fontSize: 28,
               color: "#fff",
               textAlign: "center",
@@ -1297,7 +1299,7 @@ export default function FakeHack() {
           </div>
           <h2
             style={{
-              fontFamily: "'Dela Gothic One',sans-serif",
+              fontFamily: "'Noto Sans JP',sans-serif", fontWeight: 700,
               fontSize: 22,
               color: "#fff",
               textAlign: "center",
