@@ -1,7 +1,7 @@
 {
-  "name": "FAKE HACK",
-  "short_name": "FAKE HACK",
-  "description": "セキュリティ啓発プロジェクト",
+  "name": "あなたの人生を変えるチャンス",
+  "short_name": "CHANCE",
+  "description": "本日限定・残り3枠",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

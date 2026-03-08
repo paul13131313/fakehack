@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fakehack-xi.vercel.app"),
-  title: "FAKE HACK",
-  description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+  title: "【本日限定】あなたの人生を変えるチャンス",
+  description: "⚠️ CONFIDENTIAL｜本日限定・残り3枠。今すぐ確認してください。",
   openGraph: {
-    title: "FAKE HACK",
-    description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+    title: "【本日限定】あなたの人生を変えるチャンス",
+    description: "⚠️ CONFIDENTIAL｜本日限定・残り3枠。今すぐ確認してください。",
     images: [{ url: "/ogp.png", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAKE HACK",
-    description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+    title: "【本日限定】あなたの人生を変えるチャンス",
+    description: "⚠️ CONFIDENTIAL｜本日限定・残り3枠。今すぐ確認してください。",
     images: ["/ogp.png"],
   },
   icons: {
