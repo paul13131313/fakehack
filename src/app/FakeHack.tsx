@@ -457,7 +457,7 @@ export default function FakeHack() {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dela+Gothic+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;700&display=swap');
         *{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
         @keyframes flicker{0%,100%{opacity:1}50%{opacity:.8}52%{opacity:.12}54%{opacity:.9}56%{opacity:.25}58%{opacity:1}}
         @keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-2px,1px)}20%{transform:translate(2px,-1px)}30%{transform:translate(-1px,2px)}40%{transform:translate(1px,-2px)}50%{transform:translate(-2px,-1px)}60%{transform:translate(2px,1px)}70%{transform:translate(-1px,-2px)}80%{transform:translate(1px,2px)}90%{transform:translate(-2px,1px)}}
@@ -471,7 +471,7 @@ export default function FakeHack() {
         @keyframes bannerReveal{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
         @keyframes wallGlitch{0%,100%{filter:hue-rotate(0deg) saturate(1)}33%{filter:hue-rotate(90deg) saturate(2.5)}66%{filter:hue-rotate(200deg) saturate(0.2)}}
         @keyframes rgbSplit{0%,100%{text-shadow:2px 0 #ff0000,-2px 0 #00ff00}50%{text-shadow:-2px 0 #ff0000,2px 0 #0000ff}}
-        .lp-btn{display:block;width:100%;padding:22px 20px;border:none;border-radius:16px;font-family:'Dela Gothic One',sans-serif;font-size:17px;color:#fff;cursor:pointer;transition:all .15s;position:relative;overflow:hidden;letter-spacing:.5px}
+        .lp-btn{display:block;width:100%;padding:22px 20px;border:none;border-radius:16px;font-family:'Noto Sans JP',sans-serif;font-size:17px;font-weight:700;color:#fff;cursor:pointer;transition:all .15s;position:relative;overflow:hidden;letter-spacing:.5px}
         .lp-btn:active{transform:scale(.96);filter:brightness(1.1)}
         .lp-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.18)0%,transparent 50%);pointer-events:none}
       `}</style>
@@ -526,7 +526,7 @@ export default function FakeHack() {
                 変えるチャンス
               </span>
             </h1>
-            <p style={{ color: "#888", fontSize: 13, marginTop: 12 }}>
+            <p style={{ color: "#888", fontSize: 13, marginTop: 12, fontFamily: "'Noto Sans JP',sans-serif" }}>
               🔒 本日限定・残り
               <span style={{ color: "#FF0050", fontWeight: "bold" }}> 3枠</span>
             </p>
@@ -1253,11 +1253,13 @@ export default function FakeHack() {
               lineHeight: 1.8,
             }}
           >
-            これはセキュリティ啓発のための
+            <span style={{ fontFamily: "'Noto Sans JP',sans-serif" }}>
+              これはセキュリティ啓発のための
+              <br />
+              フェイク演出です。
+            </span>
             <br />
-            フェイク演出です。
-            <br />
-            <span style={{ fontSize: 12, color: "#555" }}>
+            <span style={{ fontSize: 12, color: "#555", fontFamily: "'Noto Sans JP',sans-serif" }}>
               あなたのデータには一切アクセスしていません。
             </span>
           </div>
@@ -1313,6 +1315,7 @@ export default function FakeHack() {
               lineHeight: 1.8,
               maxWidth: 320,
               margin: "0 0 10px",
+              fontFamily: "'Noto Sans JP',sans-serif",
             }}
           >
             「めちゃめちゃ儲かる」
@@ -1329,6 +1332,7 @@ export default function FakeHack() {
               lineHeight: 1.8,
               maxWidth: 320,
               margin: "0 0 30px",
+              fontFamily: "'Noto Sans JP',sans-serif",
             }}
           >
             こんなリンク、タップしていませんか？
@@ -1349,15 +1353,16 @@ export default function FakeHack() {
           >
             <div
               style={{
-                fontFamily: "'Dela Gothic One',sans-serif",
-                fontSize: 13,
+                fontFamily: "'Noto Sans JP',sans-serif",
+                fontWeight: 700,
+                fontSize: 14,
                 color: "#00ccff",
                 marginBottom: 8,
               }}
             >
               自分の身は自分で守る時代
             </div>
-            <div style={{ color: "#8899aa", fontSize: 12, lineHeight: 1.6 }}>
+            <div style={{ color: "#8899aa", fontSize: 13, lineHeight: 1.7, fontFamily: "'Noto Sans JP',sans-serif" }}>
               総務省が公開しているサイバーセキュリティの
               <br />
               基礎知識を身につけておきましょう。
@@ -1375,7 +1380,8 @@ export default function FakeHack() {
               background: "linear-gradient(135deg,#00ccff,#00ff88)",
               borderRadius: 14,
               textAlign: "center",
-              fontFamily: "'Dela Gothic One',sans-serif",
+              fontFamily: "'Noto Sans JP',sans-serif",
+              fontWeight: 700,
               fontSize: 15,
               color: "#0a1628",
               textDecoration: "none",
@@ -1394,11 +1400,12 @@ export default function FakeHack() {
               color: "#667",
               fontSize: 13,
               cursor: "pointer",
+              fontFamily: "'Noto Sans JP',sans-serif",
             }}
           >
             もう一度体験する
           </button>
-          <div style={{ marginTop: 28, color: "#334", fontSize: 10, textAlign: "center" }}>
+          <div style={{ marginTop: 28, color: "#334", fontSize: 10, textAlign: "center", fontFamily: "'Noto Sans JP',sans-serif" }}>
             FAKE HACK — セキュリティ啓発プロジェクト
             <br />※ このサイトは実際のハッキングは一切行っていません
           </div>
