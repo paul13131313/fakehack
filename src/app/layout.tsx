@@ -2,8 +2,26 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fakehack-xi.vercel.app"),
   title: "FAKE HACK",
-  description: "セキュリティ啓発プロジェクト",
+  description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+  openGraph: {
+    title: "FAKE HACK",
+    description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+    images: [{ url: "/ogp.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAKE HACK",
+    description: "セキュリティ啓発プロジェクト - あなたのスマホ、安全ですか？",
+    images: ["/ogp.png"],
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
   other: {
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
