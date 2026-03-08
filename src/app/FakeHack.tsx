@@ -265,7 +265,7 @@ export default function FakeHack() {
     if (msgIndex > 0) {
       playSound("impact");
     }
-    const t = setTimeout(() => setMsgIndex((i) => i + 1), 2500);
+    const t = setTimeout(() => setMsgIndex((i) => i + 1), 3200);
     return () => clearTimeout(t);
   }, [phase, msgIndex]);
 
@@ -274,7 +274,7 @@ export default function FakeHack() {
     if (phase === PHASES.REVEAL) {
       stopAll();
       playSound("reveal");
-      const t = setTimeout(() => setPhase(PHASES.AWARENESS), 4500);
+      const t = setTimeout(() => setPhase(PHASES.AWARENESS), 5500);
       return () => clearTimeout(t);
     }
   }, [phase]);
@@ -460,7 +460,7 @@ export default function FakeHack() {
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Dela+Gothic+One&display=swap');
         *{-webkit-tap-highlight-color:transparent;box-sizing:border-box}
         @keyframes flicker{0%,100%{opacity:1}50%{opacity:.8}52%{opacity:.12}54%{opacity:.9}56%{opacity:.25}58%{opacity:1}}
-        @keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-5px,3px)}20%{transform:translate(5px,-3px)}30%{transform:translate(-3px,5px)}40%{transform:translate(3px,-5px)}50%{transform:translate(-5px,-3px)}60%{transform:translate(5px,3px)}70%{transform:translate(-3px,-5px)}80%{transform:translate(3px,5px)}90%{transform:translate(-5px,3px)}}
+        @keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-2px,1px)}20%{transform:translate(2px,-1px)}30%{transform:translate(-1px,2px)}40%{transform:translate(1px,-2px)}50%{transform:translate(-2px,-1px)}60%{transform:translate(2px,1px)}70%{transform:translate(-1px,-2px)}80%{transform:translate(1px,2px)}90%{transform:translate(-2px,1px)}}
         @keyframes fadeSlideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
         @keyframes skullPulse{0%{transform:scale(.3);opacity:0}50%{transform:scale(1.3);opacity:1}100%{transform:scale(1);opacity:1}}
@@ -620,7 +620,7 @@ export default function FakeHack() {
             height: "100%",
             position: "relative",
             overflow: "hidden",
-            animation: phase === PHASES.INFECTING ? "shake 0.25s infinite" : "none",
+            animation: phase === PHASES.INFECTING ? "shake 0.4s infinite" : "none",
           }}
         >
           {/* Wallpaper */}
@@ -1061,7 +1061,7 @@ export default function FakeHack() {
             padding: "44px 18px 24px",
             display: "flex",
             flexDirection: "column",
-            animation: "shake 0.2s infinite",
+            animation: "shake 0.5s infinite",
           }}
         >
           {glitchActive && <ScanOverlay color="0,255,0" opacity={0.03} />}
@@ -1128,7 +1128,6 @@ export default function FakeHack() {
             justifyContent: "center",
             alignItems: "center",
             padding: "30px 20px",
-            animation: "shake 0.15s infinite",
           }}
         >
           <ScanOverlay color="255,0,0" opacity={0.03} />
@@ -1356,12 +1355,12 @@ export default function FakeHack() {
                 marginBottom: 8,
               }}
             >
-              セキュリティ意識を高めよう
+              自分の身は自分で守る時代
             </div>
             <div style={{ color: "#8899aa", fontSize: 12, lineHeight: 1.6 }}>
-              フィッシング詐欺・マルウェア・個人情報漏洩…
+              総務省が公開しているサイバーセキュリティの
               <br />
-              あなたのリテラシーをチェック！
+              基礎知識を身につけておきましょう。
             </div>
           </div>
           <a
@@ -1383,7 +1382,7 @@ export default function FakeHack() {
               marginBottom: 16,
             }}
           >
-            🔐 セキュリティ意識テスト 2026
+            🔐 国民のサイバーセキュリティサイトへ
           </a>
           <button
             onClick={reset}
